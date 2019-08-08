@@ -2,13 +2,15 @@ var count = 0
 
 function draw() {
 
-	if (count >= 1) {
-		//alert('жопа')
-	} else {
-		//alert(count);
+	// if (count >= 1) {
+	// 	//alert('жопа')
+	// } else {
+	// 	//alert(count);
 
 		const canvas = document.getElementById('canvas');
-	const ctx = canvas.getContext('2d');
+		const ctx = canvas.getContext('2d');
+
+		canvas.width = canvas.width;
 
 	var base = new Image();
 	base.onload = function() {
@@ -16,7 +18,7 @@ function draw() {
 		ctx.globalCompositeOperation = 'destination-in';
 	};
 
-	num = 9
+	var num = document.getElementById("myinput").value;
 	base.src = "bases/" + num + ".png";
 
 	var element = new Image();
@@ -27,7 +29,7 @@ function draw() {
 
 	count++;
 
-	}
+	// }
 
 
 }
