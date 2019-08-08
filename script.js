@@ -3,14 +3,18 @@ function draw() {
 	const canvas = document.getElementById('canvas');
 	const ctx = canvas.getContext('2d');
 
-	var base = document.getElementById("base");
-	ctx.drawImage(base,0,0);
+	var base = new Image();
+	base.onload = function() {
+		ctx.drawImage(base,0,0);
+		ctx.globalCompositeOperation = 'destination-in'; //криво
+	};
+	base.src = "base.png";
 
-	ctx.globalCompositeOperation = 'destination-in';
-
-	var element = document.getElementById("element");
-	ctx.drawImage(element,0,0);
-
+	var element = new Image();
+	element.onload = function() {
+		ctx.drawImage(element,0,0);
+	};
+	element.src = "element.png";
 
 }
 
