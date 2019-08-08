@@ -1,20 +1,34 @@
+var count = 0
+
 function draw() {
 
-	const canvas = document.getElementById('canvas');
+	if (count >= 1) {
+		//alert('жопа')
+	} else {
+		//alert(count);
+
+		const canvas = document.getElementById('canvas');
 	const ctx = canvas.getContext('2d');
 
 	var base = new Image();
 	base.onload = function() {
 		ctx.drawImage(base,0,0);
-		ctx.globalCompositeOperation = 'destination-in'; //криво
+		//ctx.globalCompositeOperation = 'destination-in';
 	};
-	base.src = "base.png";
+
+	num = 9
+	base.src = "bases/" + num + ".png";
 
 	var element = new Image();
-	element.onload = function() {
+	element.onload = function test() {
 		ctx.drawImage(element,0,0);
 	};
 	element.src = "element.png";
+
+	count++;
+
+	}
+
 
 }
 
