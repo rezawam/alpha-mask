@@ -13,7 +13,7 @@ function draw() {
 	var base = new Image();
 	base.onload = function() {
 		ctx.drawImage(base,0,0);
-		//ctx.globalCompositeOperation = 'destination-in';
+		ctx.globalCompositeOperation = 'destination-in';
 	};
 
 	num = 9
