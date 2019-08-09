@@ -6,9 +6,11 @@ function draw() {
 	canvas.width = canvas.width; //refresh canvas
 
 	var base = new Image();
-	base.onload = function() {
+	function	bas() {
 		ctx.drawImage(base,0,0);
 	};
+
+	setTimeout(bas, 50);
 
 	var num = document.getElementById("myinput").value;
 	base.src = "bases/" + num + ".png";
@@ -20,7 +22,7 @@ function draw() {
 	};
 	element.src = "element.png";
 
-	setTimeout(elem, 20);
+	setTimeout(elem, 100);
 
 }
 
