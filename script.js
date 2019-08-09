@@ -10,7 +10,7 @@ function draw() {
 		ctx.drawImage(base,0,0);
 	};
 
-	setTimeout(bas, 50);
+	setTimeout(bas, 500);
 
 	var num = document.getElementById("myinput").value;
 	base.src = "bases/" + num + ".png";
@@ -22,7 +22,7 @@ function draw() {
 	};
 	element.src = "element.png";
 
-	setTimeout(elem, 100);
+	setTimeout(elem, 1000);
 
 }
 
